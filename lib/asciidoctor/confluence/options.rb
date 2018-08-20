@@ -48,7 +48,7 @@ Usage: asciidoctor-confluence --host HOSTNAME --spaceKey SPACEKEY --title TITLE 
 
           opts.on('--pageid PAGEID', 'the id of the page to update') do |page_id|
             self[:confluence][:page_id] = page_id
-            end
+          end
 
           opts.on('--update', 'indicate that the page must be updated instead of created') do
             self[:confluence][:update] = true
@@ -74,7 +74,7 @@ Usage: asciidoctor-confluence --host HOSTNAME --spaceKey SPACEKEY --title TITLE 
 
         end
 
-        opts_parser.parse! args
+        opts_parser.order! args
         check_mandatory_options
       end
 
